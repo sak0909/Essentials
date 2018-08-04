@@ -44,6 +44,10 @@ Plugin 'bling/vim-airline'
 " ==== PLUGIN THEMES
 Plugin 'morhetz/gruvbox'
 
+" ==== CScope
+Plugin 'cscope_macros.vim'
+
+
 call vundle#end()
 filetype plugin indent on
 
