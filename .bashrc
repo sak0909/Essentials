@@ -41,3 +41,10 @@ __connect_cuda()
 {
 ssh -i private-key.id_rsa  sakthi@104.155.120.167;
 }
+
+__build_cscope_db()
+{
+    find -iregex '.*\.\(h\|hpp\|c\|cpp\|cu\)$' > .files_for_cscope;
+    cscope -i .files_for_cscope -b;
+ #   rm .files_for_cscope;
+}
