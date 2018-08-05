@@ -100,7 +100,7 @@ nmap <silent> <A-Right> :wincmd l<CR>
 set shortmess+=A
 
 " ==== custom commands
-command JsonPretty execute ":%!python -m json.tool"
+"command JsonPretty execute ":%!python -m json.tool"
 set secure
 
 
