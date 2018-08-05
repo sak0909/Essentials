@@ -1,13 +1,6 @@
-# .bashrc
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Cute shell shortcuts
-alias ls='ls --sort=extension --color=auto'
 alias ll='ls -lh'
 alias lal='ls -alh'
 alias la='ls -A'
@@ -39,3 +32,12 @@ alias gl='git log'
 export GREP_OPTIONS=' — color=auto'
 # Set Vim as my default editor
 export EDITOR=vim
+
+# ~/.bash_profile or ~/.bashrc
+# enable control-s and control-q
+stty -ixon
+
+__connect_cuda()
+{
+ssh -i private-key.id_rsa  sakthi@104.155.120.167;
+}

@@ -30,7 +30,7 @@ Plugin 'mitsuhiko/vim-jinja'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'ap/vim-css-color'
 Plugin 'Vimjas/vim-python-pep8-indent'
-
+Plugin 'cscope_macros.vim'
 " ==== moving / searching
 Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
@@ -43,10 +43,6 @@ Plugin 'bling/vim-airline'
 
 " ==== PLUGIN THEMES
 Plugin 'morhetz/gruvbox'
-
-" ==== CScope
-Plugin 'cscope_macros.vim'
-
 
 call vundle#end()
 filetype plugin indent on
@@ -130,7 +126,7 @@ set showmatch		"highlight matching [({})]
 set mat=2			"for showmatch, set how many tenth of second it blinks
 set ruler			"show current position
 set magic			"magic for regular expression
-set confirm			"ask to save file
+"set confirm			"ask to save file
 set showcmd			"display incomplete command in the lower right corner of the console
 set undolevels=1000	"let vim allow 1000 undos
 set textwidth=80
@@ -156,6 +152,10 @@ set mousehide				 "hide cursor when typing
 set scrolloff=5		         "minimum lines to keep above and below
 set ttymouse=xterm2
 
+"Save with Ctrl-s
+:nmap <c-s> :w<CR>
+:imap <c-s> <Esc>:w<CR>a
+
 "indenting
 "let g:indent_guides_auto_colors = 0
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=black
@@ -173,6 +173,5 @@ set viminfo='100,f1
 
 
 set directory^=$HOME/.vim/tmp/
-
 
 
